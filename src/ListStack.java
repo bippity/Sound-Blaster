@@ -4,12 +4,12 @@ import java.util.EmptyStackException;
 
 public class ListStack implements DStack
 {
-	private Node front;
+	private ListStackNode front;
 	
-	private class Node 
+	private class ListStackNode 
 	{
 		private double value;
-		private Node next;
+		private ListStackNode next;
 	}
 	
 	public ListStack()
@@ -28,8 +28,8 @@ public class ListStack implements DStack
 	
 	public void push(double d)
 	{
-		Node tempNode = front;
-		front = new Node();
+		ListStackNode tempNode = front;
+		front = new ListStackNode();
 		front.value = d;
 		front.next = tempNode;
 	}
